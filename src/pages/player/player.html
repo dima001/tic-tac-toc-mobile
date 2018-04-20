@@ -4,6 +4,18 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <div class="gameScore" >
+      <table>
+          <tr>
+            <th>Player X</th>
+            <th>Player O</th>
+          </tr>
+          <tr>
+            <td> {{ playerXScore }} </td>
+            <td> {{ playerOScore }} </td>
+          </tr>
+      </table>
+  </div>
   <div class="gameStatus" >
       {{gameStatusMessage}}
   </div>
@@ -21,5 +33,6 @@
 <ion-footer>
   <ion-toolbar>
       <button class="restart" (click)="restartGame()">New Game</button>
+      <button class="restart" (click)="restartMatch()">New Match</button>
   </ion-toolbar>
 </ion-footer>

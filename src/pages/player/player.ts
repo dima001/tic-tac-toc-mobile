@@ -17,6 +17,8 @@ export class PlayerPage {
   squares = Array(9).fill(null);
   player = 'X';
   winner = null;
+  playerXScore = 0;
+  playerOScore = 0;
 
   constructor(public navCtrl: NavController) {
 
@@ -41,6 +43,10 @@ export class PlayerPage {
       this.squares[position] = this.player;
       if(this.winnigMove()) {
         this.winner = this.player;
+        if(this.winner === 'X')
+          this.playerXScore++;
+        else
+          this.playerOScore++;
       }
       this.player = this.player === 'X' ? 'O' : 'X';
     }
@@ -61,6 +67,14 @@ export class PlayerPage {
     this.squares = Array(9).fill(null);
     this.player = 'X';
     this.winner = null;
+  }
+
+  restartMatch() {
+    this.squares = Array(9).fill(null);
+    this.player = 'X';
+    this.winner = null;
+    this.playerXScore = 0;
+    this.playerOScore = 0;
   }
 
 }

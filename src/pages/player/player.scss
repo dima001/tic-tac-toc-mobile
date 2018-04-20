@@ -1,10 +1,26 @@
 page-player {
 
     .board {
-      background-color: #a45632;
+      background-color: #003300;
       color: #fff;
     }
-  
+
+    table {
+      background: black;
+      margin-left: 25%;
+      padding: 5px;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+      object-position: center;
+    }
+    
+    td, th {
+        border: 3px solid grey;
+        color: white;
+        text-align: center;
+        padding: 8px;
+    }
     .gameStatus {
       margin: 0px;
       padding: 15px;
@@ -16,7 +32,7 @@ page-player {
       text-align: center;
     }
     
-    .restart {
+    .restart{
       background-color: #34495e;
       color: #fff;
       border: 0px;
@@ -25,10 +41,10 @@ page-player {
       font-weight: bold;
       margin: 0px;
       padding: 15px;
-      width: 100%;
+      width: 49%;
     }
   
-    .restart:hover {
+    .restartGame:hover {
       background-color: #c1cdcd;
       cursor: pointer;
     }
@@ -37,7 +53,7 @@ page-player {
       width: 100px;
       height: 100px;
       box-sizing: border-box;
-      border: 3px solid #f4af78;
+      border: 3px solid green;
       font-size: 5em; 
       font-family: 'Gochi Hand', sans-serif;
       text-align: center;
